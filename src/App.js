@@ -5,6 +5,7 @@ import Home from './components/Home';
 import CreateBlog from './components/Create';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import BlogDetails from './components/Blogdetails';
+import NotFound from './components/Notfound';
 
 function App() {
   return (
@@ -21,8 +22,12 @@ function App() {
               <CreateBlog/>
             </Route>
 
-            <Route path='/blogdetails/:id'>
+            <Route path='/blog-details/:id'>
               <BlogDetails/>
+            </Route>
+
+            <Route path='*'>
+              <NotFound/>
             </Route>
           </Switch>
         </div>
